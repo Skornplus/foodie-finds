@@ -1,0 +1,20 @@
+<div class="content">
+    <!-- <div class="row">
+        <div class="col-12"> -->
+            <div class="terminal" #scrollMe>
+                <pre> This is restaurant searcher</pre>
+                <pre *ngFor="let history of line">{{history}}</pre>
+                <pre> > <input (keyup.enter)="onEnter()" 
+                     #myInput class="terminal-input" type="text" [(ngModel)]="text" >
+                </pre>
+              
+                </div>
+        <!-- </div>
+    </div> -->
+    <div class="row">
+        <div class="col-12">
+            <app-google-map [locList]="locList" ></app-google-map>
+
+        </div>
+    </div>
+</div>

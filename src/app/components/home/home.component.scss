@@ -1,0 +1,130 @@
+
+
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+    .card-container > *:not(.circle-link) ,
+    .terminal {
+      width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+      height: 16px;
+      margin: 8px 0;
+    }
+
+    .card.highlight-card span {
+      margin-left: 72px;
+    }
+
+    svg#rocket-smoke {
+      right: 120px;
+      transform: rotate(-5deg);
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    svg#rocket-smoke {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  .content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+  
+
+  .terminal {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    max-height: 400px;
+    border-radius: 6px;
+    padding-top: 45px;
+    margin-top: 8px;
+    overflow: auto;
+    background-color: rgb(15, 15, 16);
+  }
+
+  .terminal::before {
+    content: "\2022 \2022 \2022";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: rgb(58, 58, 58);
+    color: #c2c3c4;
+    width: 100%;
+    font-size: 12px;
+    line-height: 0;
+    padding: 14px 0;
+    text-indent: 4px;
+  }
+
+  .terminal pre {
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    color: white;
+    padding: 0 1rem 1rem;
+    margin: 0;
+  }
+
+  .terminal input {
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    background-color: black;
+    color: white;
+  }
+
+  // Define terminal input styles
+$terminal-input-background: #000;
+$terminal-input-color: #fff;
+$terminal-input-border: none;
+$terminal-input-cursor: #fff;
+
+// Style the input element
+input[type="text"].terminal-input {
+  background-color: $terminal-input-background;
+  color: $terminal-input-color;
+  border: $terminal-input-border;
+  caret-color: $terminal-input-cursor;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+
+  // Style the input when it has focus
+  &:focus {
+    outline: none;
+  }
+}
+
+.txt-white{
+    color: white;
+}
